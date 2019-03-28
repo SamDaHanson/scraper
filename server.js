@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-var uri = "mogolab-graceful-88747"; //process.env.MONGODB_URI
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadline";
+//var uri = "mogolab-graceful-88747"; //process.env.MONGODB_URI
+var uri = "mongodb://heroku_ssr6jx1n:ttdsevnlejcpg5noi5ug6g8hsv@ds121105.mlab.com:21105/heroku_ssr6jx1n";
+var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
 
 mongoose.connect(MONGODB_URI);
 // Routes

@@ -1,11 +1,11 @@
 {
-  "name": "node-js-getting-started",
+  "name": "scaper",
   "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
     "node": "10.x"
   },
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "node test.js"
@@ -31,6 +31,5 @@
     "node",
     "heroku",
     "express"
-  ],
-  "license": "MIT"
+  ]
 }

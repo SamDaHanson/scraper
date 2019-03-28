@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
     <style>
-      body { background-color: #F2F6D0 }
+      body { background-color: lightcyan }
+      #title {
+        background-color: lightgreen;
+        width: 30%;
+        text-align: center;
+      }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -16,8 +21,10 @@
         overflow: auto;
         width: 60%;
         height: 700px;
+        background-color: lightgreen;
       }
       #notes {
+        background-color: lightgreen;
         float: right;
         width: 30%;
       }
@@ -25,6 +32,11 @@
         display: block;
         width: 100%;
         background-color: #FCF5C7;
+      }
+      .titles {
+        margin: 0px;
+        font-weight: bold;
+        text-align: center;
       }
       input {
         height: 36px;
@@ -38,8 +50,7 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
+      <h1 id="title">NY Time's Scraper</h1>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>

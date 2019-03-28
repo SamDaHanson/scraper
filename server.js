@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 var uri = "mogolab-graceful-88747"; //process.env.MONGODB_URI
 
-var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadline";
 
 mongoose.connect(MONGODB_URI);
 // Routes
@@ -36,6 +36,16 @@ app.get("/scrape", function(req, res) {
     $("article").each(function(i, element) {
 
       var title = $(element).children().text();
+      // console.log($(element));
+      var children = $(element).children();
+      console.log($(element).children());
+
+      // console.log(children.text());
+      for (var i = 0; i < children.length; i++) {
+        console.log(i+": "+children[i]);
+        var childs = children[i];
+        console.log(childs);
+      }
       var link = $(element).find("a").attr("href");
 
       var result = {};
@@ -44,10 +54,10 @@ app.get("/scrape", function(req, res) {
 
       db.Article.create(result)
         .then(function(dbArticle) {
-          console.log(dbArticle);
+          //console.log(dbArticle);
         })
         .catch(function(err) {
-          console.log(err);
+          //console.log(err);
         });
     });
     res.send("Scrape Complete");

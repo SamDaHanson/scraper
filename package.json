@@ -25,11 +25,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SamDaHanson/scraper.git"
+    "url": "git+https://github.com/SamDaHanson/scraper.git"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/SamDaHanson/scraper/issues"
+  },
+  "homepage": "https://github.com/SamDaHanson/scraper#readme",
+  "author": "",
+  "license": "ISC"
 }

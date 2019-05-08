@@ -23,6 +23,7 @@ app.use(express.static("public"));
 //var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
 var MONGODB_URI = process.env.MonGODB_URI || "mongodb://localhost/mongoHeadline";
 
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 // Routes
 

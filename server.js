@@ -19,9 +19,9 @@ app.use(express.static("public"));
 
 //var uri = "mogolab-graceful-88747"; //process.env.MONGODB_URI
 //var uri = "mongodb://heroku_ssr6jx1n:ttdsevnlejcpg5noi5ug6g8hsv@ds121105.mlab.com:21105/heroku_ssr6jx1n";
-//var uri = "mongodb://heroku_ssr6jx1n:heroku_ssr6jx1n@ds121105.mlab.com:21105/heroku_ssr6jx1n";
-//var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
-var MONGODB_URI = process.env.MonGODB_URI || "mongodb://localhost/mongoHeadline";
+var uri = "mongodb://heroku_kgj5twbs:heroku_kgj5twbs@ds161794.mlab.com:61794/heroku_kgj5twbs";
+var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
+//var MONGODB_URI = process.env.MonGODB_URI || "mongodb://localhost/mongoHeadline";
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
@@ -30,6 +30,8 @@ mongoose.connect(MONGODB_URI);
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   axios.get("https://www.nytimes.com").then(function(response) {
+
+    console.log(response);
 
     var $ = cheerio.load(response.data);
     // db.Article.dropDatabase();

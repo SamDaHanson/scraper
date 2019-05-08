@@ -19,9 +19,9 @@ app.use(express.static("public"));
 
 //var uri = "mogolab-graceful-88747"; //process.env.MONGODB_URI
 //var uri = "mongodb://heroku_ssr6jx1n:ttdsevnlejcpg5noi5ug6g8hsv@ds121105.mlab.com:21105/heroku_ssr6jx1n";
-//var uri = "mongodb://heroku_kgj5twbs:heroku_kgj5twbs@ds161794.mlab.com:61794/heroku_kgj5twbs";
-//var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
-var MONGODB_URI = process.env.MonGODB_URI || "mongodb://localhost/mongoHeadline";
+var uri = "mongodb://sam:sam123@ds161794.mlab.com:61794/heroku_kgj5twbs";
+var MONGODB_URI = uri || "mongodb://localhost/mongoHeadline";
+//var MONGODB_URI = process.env.MonGODB_URI || "mongodb://localhost/mongoHeadline";
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
